@@ -3,4 +3,9 @@
 @import 'settings.variables';
 @import 'settings.responsive';
 @import 'components.content';
-
+img{
+  width: 50%;
+}
+.bg-image{
+  background-image: url(https://mdbootstrap.com/img/Photos/Others/gradient1.jpg);
+}
