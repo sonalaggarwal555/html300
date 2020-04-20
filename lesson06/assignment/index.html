@@ -1,15 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <link rel="stylesheet" href="css/style.css" />
-        <title>Assignment 06 - Bootstrap 4</title>
-    </head>
-    <body>
-        <main class="main">
-          
-        </main>
-    </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <title>Assignment 06 - Bootstrap 4</title>
+</head>
+<body>
+<!-- Nav Bar-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a href="#" class="navbar-nav">Navbar</a>
+    <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+      <div id="navbarNav" class="collapse navbar-collapse">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="images.html" class="nav-link">Images</a>
+          </li>
+          <li class="nav-item">
+            <a href="Accordian.html" class="nav-link">Accordian</a>
+          </li>
+          <li class="nav-item">
+            <a href="grid.html" class="nav-link">Grid</a>
+          </li>
+        </ul>
+      </div>
+  </div>
+</nav>
+<!-- Jumbotron -->
+<div class="Jumbotron card card-image" style="background-image: url(https://mdbootstrap.com/img/Photos/Others/gradient1.jpg);">
+<div class="text-white text-center py-5 px-4">
+  <div>
+    <h2 class="card-title">My Adventure</h2>
+    <div class="view overlay my-4">
+    <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(70).jpg" alt="img-fluid">
+    <a href="#">
+      <div class="mask rgba-white-slight"></div>
+    </a>
+    </div>
+    <h5 class="indigo-text h5 mb-4">Photography</h5>
+    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat fugiat, laboriosam, voluptatem,
+        optio vero odio nam sit officia accusamus minus error nisi architecto nulla ipsum dignissimos. Odit sed qui, dolorum!
+    </p>
+  </div>
+</div>
+</div>
+</body>
 </html>
