@@ -1,3 +1,15 @@
+<template>
+<main class="main">
+  <div v-for="feature in features" class="jumbotron jumbotron-fluid" v-bind:key="feature.id">
+    <div class="container">
+      <h3 class="display-4">{{feature.title}}</h3>
+      <p class="lead">{{feature.desc}}</p>
+      <img :src="feature.image" class="img-fluid" :alt="feature.alt">
+    </div>
+  </div>
+</main>
+</template>
+
 <script>
 const image1 = require('../assets/cover.jpg')
 const image2 = require('../assets/cover2.jpg')
@@ -19,18 +31,6 @@ export default {
   }
 }
 </script>
-
-<template>
-<main class="main">
-  <div v-for="feature in features" class="jumbotron jumbotron-fluid" v-bind:key="feature.id">
-    <div class="container">
-      <h3 class="display-4">{{feature.title}}</h3>
-      <p class="lead">{{feature.desc}}</p>
-      <img :src="feature.image" class="img-fluid" :alt="feature.alt">
-    </div>
-  </div>
-</main>
-</template>
 
 <style>
 #app {

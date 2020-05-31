@@ -1,12 +1,12 @@
 <template>
-<body>
+<main>
   <div class="container">
     <div v-for="image in images" class="card" v-bind:key="image.id">
       <img :src="image.src" :alt="image.alt" class="card-img-top img-fluid">
       <div class="caption"> {{ image.caption }} </div>
     </div>
   </div>
-</body>
+</main>
 </template>
 
 <script>
