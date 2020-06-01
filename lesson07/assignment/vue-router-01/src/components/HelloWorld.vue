@@ -15,19 +15,19 @@ const image1 = require('../assets/cover.jpg')
 const image2 = require('../assets/cover2.jpg')
 export default {
   data () {
-  return {
-  features: [{
-  title: 'title-1,desc: This the description..',
-  image: image1,
-  alt:'img1'
-  },
-  {
-  title: 'title-2,desc: This the description..',
-  image: image2,
-  alt:'img2'
-  }
-  ]
-  }
+    return {
+      features: [{
+        title: 'title-1,desc: This the description..',
+        image: image1,
+        alt: 'img1'
+      },
+      {
+        title: 'title-2,desc: This the description..',
+        image: image2,
+        alt: 'img2'
+      }
+      ]
+    }
   }
 }
 </script>
