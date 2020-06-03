@@ -4,7 +4,7 @@
   <div v-for="feature in features" class="jumbotron jumbotron-fluid" v-bind:key="feature.id">
     <div class="container">
       <h3 class="display-4">{{feature.title}}</h3>
-      <p class="lead">{{feature.desc}}!</p>
+      <p class="lead">{{feature.desc}}</p>
       <img :src="feature.image" class="img-fluid" :alt="feature.alt">
     </div>
   </div>
@@ -17,7 +17,7 @@ const image2 = require('../assets/cover2.jpg')
 export default {
   data () {
     return {
-      name: 'House',
+      name: 'house',
       features: [{
         title: 'title-1,desc: This the description..',
         image: image1,
@@ -29,6 +29,13 @@ export default {
         alt: 'img2'
       }
       ]
+    }
+  },
+  filters: {
+    capitalize: function (value) {
+      if (!value) return ''
+      value = value.toString()
+      return value.charAt(0).toUpperCase() + value.slice(1)
     }
   }
 }
@@ -53,6 +60,6 @@ export default {
 }
 
 img {
-  width: 50%;
+  width: 20%;
 }
 </style>

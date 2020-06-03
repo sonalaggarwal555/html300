@@ -1,7 +1,7 @@
 <script>
 import photos from './photos.vue'
 import mixins from './mixins'
-import Button from './Button.vue'
+import Test from './Button.vue'
 
 var card1 = require('../assets/pic-1.jpg')
 var card2 = require('../assets/pic-2.jpg')
@@ -15,7 +15,7 @@ export default {
   mixins: [mixins],
   components: {
     photos,
-    'my-button': Button
+    Test
   },
   data () {
     return {
@@ -38,23 +38,21 @@ export default {
   <div>
     <h1>My first post</h1>
     <p>This is a post for props</p>
-    <my-button name="Share"></my-button>
-    <my-button name="Like"></my-button>
-    <my-button name="Comment"></my-button>
+    <Test v-bind:name="'XYZ'" v-bind:handleClick="function(){}"></Test>
+    <Test v-bind:name="'ABC'" v-bind:handleClick="function(){}"></Test>
+    <Test v-bind:name="'DEF'" v-bind:handleClick="function(){}"></Test>
   </div>
   <!-- Display images -->
   <div class="container" v-if="images">
-  <photos
-    v-for="image in images"
-    :image="image"
-    :key="image.src"
-    />
+  <div v-for="image in images" :key="image.src">
+    <photos v-bind:image="image" />
+  </div>
   </div>
   <!--Button mixin to remove border from image-->
   <section v-if="images">
-    <button v-if="myVal" @click="myMethod()">
-      Remove border !
-    </button>
+  <Test v-if="myVal" v-bind:name="'XYZ'" v-bind:handleClick="function(){}">
+    Remove border !
+  </Test>
   </section>
 </div>
 </template>
