@@ -1,7 +1,7 @@
 <template>
 <main>
   <div class="container">
-    <div v-for="image in images" class="card" v-bind:key="image.id">
+    <div v-for="image in images" class="card" v-bind:key="image.src">
       <img :src="image.src" :alt="image.alt" class="card-img-top img-fluid">
       <div class="caption"> {{ image.caption }} </div>
     </div>
