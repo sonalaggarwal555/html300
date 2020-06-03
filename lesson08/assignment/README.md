@@ -1,6 +1,7 @@
 # Assignment 08 - Expanded Vue Features
 
-In the last assignment in lesson07, you converted your site to use Vue CLI scaffolding and Vue features like routing and looping over data. Now you'll refactor some of those pages to utilize components and features like mixins and slots. 
+In the last assignment in lesson07, you converted your site to use Vue CLI scaffolding and Vue features like routing and looping over data. Now you'll 
+refactor some of those pages to utilize components and features like mixins and slots. 
 
 ### Vue References
 - [Vue Docs](https://vuejs.org/v2/guide/)
