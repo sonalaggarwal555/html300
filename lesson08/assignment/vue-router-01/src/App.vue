@@ -20,8 +20,8 @@
     <!-- Main content -->
     <div class="d-flex justify-content-center">
       <slots-example>
-        <h1 slot="title">{{ slotMarkup }}</h1>
-        <h3 slot="body">This is body-text</h3>
+        <h3 slot="title">{{ slotMarkup }}</h3>
+        <h6 slot="body">This is body-text</h6>
       </slots-example>
     </div>
     <div class="col-sm-10">

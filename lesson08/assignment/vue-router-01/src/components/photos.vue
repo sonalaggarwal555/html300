@@ -28,4 +28,7 @@ export default {
   padding: 0.3rem;
   background-color: #e4cece;
 }
+.img{
+  width: 20%;
+}
 </style>

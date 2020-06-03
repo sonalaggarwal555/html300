@@ -15,7 +15,7 @@ export default{
     myMethod () {
       var element = document.getElementById('border')
       element.classList.toggle('frame')
-      console.log('..............')
+      console.log('mixin method')
     },
     displayMessage: function () {
       console.log('Printing from a mixin function')

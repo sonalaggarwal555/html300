@@ -35,31 +35,29 @@ export default {
 <template>
 <div id="app">
   <!-- First Prop -->
-  <div>
-    <h1>My first post</h1>
-    <p>This is a post for props</p>
-    <Test v-bind:name="'XYZ'" v-bind:handleClick="function(){}"></Test>
-    <Test v-bind:name="'ABC'" v-bind:handleClick="function(){}"></Test>
-    <Test v-bind:name="'DEF'" v-bind:handleClick="function(){}"></Test>
-  </div>
+  <!--Button mixin to remove border from image-->
+  <section v-if="images">
+  <Test v-if="myVal" v-bind:name="'Remove Border'" @click="myMethod()" v-bind:handleClick="function(){}" class="button">
+    Remove border
+  </Test>
+  </section>
   <!-- Display images -->
   <div class="container" v-if="images">
   <div v-for="image in images" :key="image.src">
     <photos v-bind:image="image" />
   </div>
   </div>
-  <!--Button mixin to remove border from image-->
-  <section v-if="images">
-  <Test v-if="myVal" v-bind:name="'XYZ'" v-bind:handleClick="function(){}">
-    Remove border !
-  </Test>
-  </section>
+
 </div>
 </template>
 
 <style scoped>
-button {
-border-style: solid;
+.button {
+  border-style:2px solid blue;
+  margin:3rem;
+  color: #ffc107;
+  background-color: white;
+  position: relative;
 }
 .card {
 width: 30rem;
@@ -68,5 +66,8 @@ margin-bottom: 2rem;
 }
 .caption {
 padding: 1rem;
+}
+#id{
+margin: 0;
 }
 </style>
