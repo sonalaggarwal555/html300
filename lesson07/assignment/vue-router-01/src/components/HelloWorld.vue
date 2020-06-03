@@ -1,6 +1,6 @@
 <template>
 <main class="main">
-  <div v-for="feature in features" class="jumbotron jumbotron-fluid" v-bind:key="feature.id">
+  <div v-for="feature in features" class="jumbotron jumbotron-fluid" v-bind:key="feature.alt">
     <div class="container">
       <h3 class="display-4">{{feature.title}}</h3>
       <p class="lead">{{feature.desc}}</p>
