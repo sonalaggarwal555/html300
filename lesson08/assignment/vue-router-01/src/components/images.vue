@@ -48,8 +48,8 @@ export default {
   </section>
   <!-- Display images -->
   <div class="container" v-if="images">
-  <div v-for="image in images" :key="image.src">
-    <photos v-bind:image="image" />
+  <div v-for="image in images" :key="image.src" @click="myMethod()">
+    <photos v-bind:image="image"/>
   </div>
   </div>
 </div>

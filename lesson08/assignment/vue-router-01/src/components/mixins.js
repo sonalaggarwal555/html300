@@ -8,7 +8,7 @@ export default{
       myVal: true
     }
   },
-  mehtods: {
+  methods: {
     toggleShowHide () {
       this.isHidden = !this.isHidden
     },
