@@ -1,0 +1,11 @@
+{
+  "name": "assignment",
+  "version": "1.0.0",
+  "description": "In the last assignment in lesson07, you converted your site to use Vue CLI scaffolding and Vue features like routing and looping over data. Now you'll \r refactor some of those pages to utilize components and features like mixins and slots.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
