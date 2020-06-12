@@ -1,7 +1,13 @@
 <script>
 export default {
   name: 'photos',
-  props: ['image']
+  props: {
+    image: {
+      src: String,
+      alt: String,
+      title: String
+    }
+  }
 }
 </script>
 
@@ -18,7 +24,6 @@ export default {
 <style scoped>
 .container {
   display: flex;
-  flex-flow: row wrap;
 }
 .card {
   width: 30rem;

@@ -1,7 +1,7 @@
 <script>
 import photos from './photos.vue'
 import mixins from './mixins'
-import Test from './Button.vue'
+import MyButton from './MyButton.vue'
 
 var card1 = require('../assets/pic-1.jpg')
 var card2 = require('../assets/pic-2.jpg')
@@ -15,7 +15,7 @@ export default {
   mixins: [mixins],
   components: {
     photos,
-    Test
+    MyButton
   },
   data () {
     return {
@@ -26,7 +26,13 @@ export default {
         {src: card4, alt: '...', caption: 'Peach Sunrise: One of our rare varieties.'},
         {src: card5, alt: '...', caption: 'Scarlett Letter: This head-turner is great in a mixed bouquet.'},
         {src: card6, alt: '...', caption: 'Snow Top: Can brighten up any room.'}
-      ]
+      ],
+      isRemoveBorderButtonClicked: false
+    }
+  },
+  methods: {
+    RemoveBorderFromMyButton: function () {
+      this.isRemoveBorderButtonClicked = !this.isRemoveBorderButtonClicked
     }
   }
 }
@@ -37,9 +43,8 @@ export default {
   <!-- First Prop -->
   <!--Button mixin to remove border from image-->
   <section v-if="images">
-  <Test v-if="myVal" v-bind:name="'Remove Border'" @click="myMethod()" v-bind:handleClick="function(){}" class="button">
-    Remove border
-  </Test>
+  <MyButton  v-bind:name="'Remove Border'" v-bind:handleClick="RemoveBorderFromMyButton" class="mybutton" v-bind:class="{'no-border': isRemoveBorderButtonClicked}">
+  </MyButton>
   </section>
   <!-- Display images -->
   <div class="container" v-if="images">
@@ -47,22 +52,23 @@ export default {
     <photos v-bind:image="image" />
   </div>
   </div>
-
 </div>
 </template>
 
 <style scoped>
-.button {
-  border-style:2px solid blue;
-  margin:3rem;
-  color: #ffc107;
-  background-color: white;
-  position: relative;
+#app {
+  margin-top:0px;
+}
+.mybutton {
+ border:4px solid red;
+}
+.no-border {
+border: none;
 }
 .card {
-width: 30rem;
-margin-left: 20rem;
-margin-bottom: 2rem;
+  width: 30rem;
+  margin-left: 20rem;
+  margin-bottom: 2rem;
 }
 .caption {
 padding: 1rem;
